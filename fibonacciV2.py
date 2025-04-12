@@ -37,7 +37,7 @@ def contar_letras(palavra):
  
 def posicoes_letras(palavra):
     for i, letra in enumerate(palavra):
-        t.pencolor("black" if letra == "A" else "blue")  # <- Adicionada a troca de cor
+        t.pencolor("black" if letra == "A" else "red")  # <- Adicionada a troca de cor
         posicao = i + 1
         if posicao % 2 == 0:
             par_ou_impar = "par"
