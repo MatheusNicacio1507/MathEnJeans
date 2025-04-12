@@ -3,14 +3,14 @@ var2 = "AB"
 cont = 0
 palavra = "A"
  
-while cont < 0: #Ajuste o valor de P aqui (p+1) EX: para P=5 bote o valor de P=6
+while cont < 1: #Ajuste o valor de P aqui (p+1) EX: para P=5 bote o valor de P=6
     if cont == 0:
         palavra = var2
     else:
         palavra = var2 + var1
         var1 = var2
         var2 = palavra
-        cont = cont + 1
+    cont = cont + 1  # <- Corrigido: movido para fora do else
  
 import turtle
  
@@ -25,6 +25,7 @@ t.penup()
 t.goto(-650, -300)  # posição no canto superior esquerdo (ajuste conforme o fractal)
 t.pendown()
 t.left(90)
+
 def contar_letras(palavra):
     contagem = {}
     for letra in palavra:
@@ -36,7 +37,7 @@ def contar_letras(palavra):
  
 def posicoes_letras(palavra):
     for i, letra in enumerate(palavra):
-        t.pencolor("black" if letra == "A" else "red") #troca de cor
+        t.pencolor("black" if letra == "A" else "blue")  # <- Adicionada a troca de cor
         posicao = i + 1
         if posicao % 2 == 0:
             par_ou_impar = "par"
@@ -58,4 +59,3 @@ posicoes_letras(palavra)
  
 screen.update()
 turtle.done()
- 
