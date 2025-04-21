@@ -3,7 +3,7 @@ var2 = "AB"
 cont = 0
 palavra = "A"
  
-while cont < 3: #Ajuste o valor de P aqui (p+1) EX: para P=5 bote o valor de P=6
+while cont < 5: #Ajuste o valor de P aqui (p+1) EX: para P=5 bote o valor de P=6
     if cont == 0:
         palavra = var2
     else:
