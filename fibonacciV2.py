@@ -2,8 +2,13 @@ var1 = "A"
 var2 = "AB"
 cont = 0
 palavra = "A"
- 
-while cont < 5: #Ajuste o valor de P aqui (p+1) EX: para P=5 bote o valor de P=6
+
+#---------------CONTROLE---------------------
+px = 10 # Mude a escala de pixel aqui
+grau = 90 #Mude a angulação aqui
+#-------------------------------------------
+
+while cont < 10: #Ajuste o valor de P aqui EX: para P=5 bote o valor de 5
     if cont == 0:
         palavra = var2
     else:
@@ -42,19 +47,19 @@ def posicoes_letras(palavra):
         if posicao % 2 == 0:
             par_ou_impar = "par"
             if letra == "A":
-                t.left(90)
-                t.forward(20)#Muda escala de px
+                t.left(grau)
+                t.forward(px)#Muda escala de px
             else:
-                t.forward(20)#Muda escala de px
+                t.forward(px)#Muda escala de px
         else:
             par_ou_impar = "ímpar"
             if letra == "A":
-                t.right(90)
-                t.forward(20)#Muda escala de px
+                t.right(grau)
+                t.forward(px)#Muda escala de px
             else:
-                t.forward(20)#Muda escala de px
+                t.forward(px)#Muda escala de px
         print(f"Letra '{letra}' está na posição {posicao} ({par_ou_impar})")
- 
+        print(palavra)
 posicoes_letras(palavra)
  
 screen.update()
