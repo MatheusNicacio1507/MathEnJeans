@@ -27,7 +27,7 @@ screen.tracer(0)  # Desliga a atualização automática
 t.hideturtle()#tira a setinha
 t.speed(0)  # velocidade máxima
 t.penup()
-t.goto(-650, -300)  # posição no canto superior esquerdo (ajuste conforme o fractal)
+#t.goto(-650, -300)  # posição no canto superior esquerdo (ajuste conforme o fractal)
 t.pendown()
 t.left(90)
 
